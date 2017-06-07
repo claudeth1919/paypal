@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.min.js" charset="utf-8"></script>
+    <script src="https://www.paypalobjects.com/js/external/dg.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <!-- <form id="prepare_payment_form" action="" method="post">
+       <input name="payment_1" type="text" value="50" />
+       <input name="return_url" type="text" value="http://localhost:8000" />
+       <input name="payment_1" type="text" value="50" />
+       <input name="user_address_1" type="text" value="my_first_address@domain.com" />
+       <input name="payment_2" type="text" value="25" />
+       <input name="user_address_2" type="text" value="my_second_address@domain.com" />
+       <input id="prepare_payment" name="prepare_payment" type="submit" value="Prepare payment with PayPal" />
+    </form>
+    <form id="execute_payment_form" action="#" method="post" target="PPDGFrame">
+       <input id="execute_payment" disabled="disabled" name="execute_payment" type="submit" value="Execute payment with PayPal" />
+    </form> -->
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_cart">
+      <input type="hidden" name="item_name" value="hat">
+      <input type="hidden" name="item_number" value="123">
+      <input type="hidden" name="amount" value="15.00">
+      <input type="hidden" name="email" value="jdoe@zyzzyu.com">
+      <input type="hidden" name="client_id" value="ASqQksB-UZNwIz2KpbtbSP3Uu_sBipgpg7ELRYF_SZ_q4BxkwoiccgbtpkYQi4pyTJE18BN_My4NeKMz">
+      <input type="hidden" name="secret" value="EBEbhCuGnjnwk6hH6T5mvutFTPgIWmp2tZtIraX1WDx52hgmE0qvUcIWiLYbbY-lvZRebD_fo9EyhqYS">
+      <input type="hidden" name="email" value="jdoe@zyzzyu.com">
+      <input type="hidden" name="sandbox_account" value="tecnologicogorila-facilitator@gmail.com">
+      <input type="image" name="submit"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+        alt="PayPal - The safer, easier way to pay online">
+    </form>
+  </body>
+
+  <script type="text/javascript" src="index.js"></script>
+
+
+</html>

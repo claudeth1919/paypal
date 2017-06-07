@@ -1,45 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Laravel</title>
+  <head>
+  <script src="https://www.paypalobjects.com/js/external/dg.js" type="text/javascript"></script>
+  </head>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+  <body>
+    <form action="https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay" target="PPDGFrame" class="standard">
+      <label for="buy">Buy Now:</label>
+      <input type="image" id="submitBtn" value="Pay with PayPal" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif">
+      <input id="type" type="hidden" name="expType" value="light">
+      <input id="paykey" type="hidden" name="paykey" value="insert_pay_key">
+    </form>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <script type="text/javascript" charset="utf-8">
+      var embeddedPPFlow = new PAYPAL.apps.DGFlow({trigger: 'submitBtn'});
+    </script>
+  </body>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
 </html>
